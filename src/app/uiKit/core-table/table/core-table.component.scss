@@ -1,0 +1,75 @@
+@import '../../styles/index';
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+.viewport {
+  height: 100%;
+}
+
+.table {
+  width: 100%;
+}
+
+.row {
+  min-height: 27px;
+  height: 70px;
+  cursor: pointer;
+
+  @media #{$gt-xs} {
+    height: 27px;
+  }
+
+  &:hover {
+    background-color: $app-bar;
+  }
+}
+
+.header {
+  white-space: nowrap;
+
+  & > * {
+    color: $text;
+    font-weight: 600;
+  }
+}
+
+.mat-header-cell,
+.mat-cell {
+  padding-right: 16px;
+
+  &:first-of-type {
+    padding-left: 10px;
+  }
+}
+
+.progress {
+  border: none;
+  min-height: 0;
+
+  .mat-header-cell {
+    border: 0;
+    padding: 0;
+  }
+}
+
+.progress-bar {
+  bottom: 0;
+  position: absolute;
+  @extend %fadeIn;
+}
+
+.menu {
+  width: 40px;
+  max-width: 40px;
+  flex: 1 0 auto;
+  margin-right: -40px;
+  padding-right: 0;
+
+  &.cell {
+    z-index: -1 !important;
+    background: transparent;
+  }
+}
